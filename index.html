@@ -584,6 +584,7 @@ html,
 body {
   height: 100%;
   overflow: hidden;
+  background: #fff;
 }
 .banner {
   margin: 0 auto;
@@ -592,6 +593,7 @@ body {
   text-align: center;
   height: 100%;
   overflow: hidden;
+  background: #fff;
 }
 .logo {
   margin-top: 5px;
@@ -748,6 +750,17 @@ body {
   position: absolute;
   top: 70px;
   right: 30px;
+  display: block;
+}
+@media (min-height: 400px) {
+  .second-instruction__arrow {
+    display: none;
+  }
+}
+@media (min-height: 500px) {
+  .second-instruction__arrow {
+    display: block;
+  }
 }
 @media (orientation: landscape) {
   .second-instruction__arrow {
@@ -758,6 +771,16 @@ body {
   position: absolute;
   top: 150px;
   right: 5px;
+}
+@media (min-height: 400px) {
+  .second-instruction__card {
+    top: 100px;
+  }
+}
+@media (min-height: 500px) {
+  .second-instruction__card {
+    top: 150px;
+  }
 }
 @media (orientation: landscape) {
   .second-instruction__card {
@@ -805,7 +828,7 @@ body {
         <div class="first-instruction">
           <div class="first-instruction__txt"><img src="img/first-instruction.min.svg" alt="Сотри лишнее"></div>
           <div class="first-instruction__icon"><img src="img/ico-hand.min.svg"></div>
-        </div><a class="second-instruction" href="http://sdm-fitnes.ru/"><img class="second-instruction__continue" src="img/continue.min.svg"><img class="second-instruction__arrow" src="img/arrow.min.svg"><img class="second-instruction__card" src="img/card-info.min.svg"><img class="second-instruction__45" src="img/45.min.svg"></a>
+        </div><a class="second-instruction" onclick="parent.postMessage('banner.redirect', '*');"><img class="second-instruction__continue" src="img/continue.min.svg"><img class="second-instruction__arrow" src="img/arrow.min.svg"><img class="second-instruction__card" src="img/card-info.min.svg"><img class="second-instruction__45" src="img/45.min.svg"></a>
       </section>
       <footer class="page-footer">
         <div class="contacts"><a class="contacts__tel" href="tel:+74957803565">+7 495 780-35-65</a>
